@@ -1,0 +1,64 @@
+﻿@model EmployeeData_CRUD_App.Models.Employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeNamee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeNamee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeDesignation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeDesignation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeContactNo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
